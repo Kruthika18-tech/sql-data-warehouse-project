@@ -1,37 +1,58 @@
 # Data Warehouse and Analytics Project
 
-Welcome to the "Data Warehouse and Analytics Project" repository!
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project highlights industry best practices in data engineering and analytics.
+A SQL Server data warehouse that consolidates sales data from two source systems and supports analytics on customers, products and sales.
 
-## Project Requirements
+> **Credit:** I built this project by following the Data with Baraa tutorial series, as part of learning data analytics.
 
-### Building the Data Warehouse (Data Engineering)
+## Objective
 
-#### Objective
-Develop a modern data warehouse using SQL server to consolidate sales data, enabling analytical reporting and informed decision-making
+Build a modern data warehouse to consolidate sales data and enable analytical reporting.
 
-### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user - friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+- **Data sources:** ERP and CRM data provided as CSV files
+- **Data quality:** Cleanse and resolve quality issues before analysis
+- **Integration:** Combine both sources into one data model designed for analytical queries
+- **Scope:** Latest dataset only; historization is not required
+- **Documentation:** Clear documentation of the data model for business and analytics users
 
-- --
-### BI: Analytics & Reporting (Data Analytics)
+## Architecture
 
-### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behaviour**
-- **Product Performance**
-- **Sales Trends**
+The warehouse follows a three-layer design:
 
-  These insights empower stakeholders with key business metrics, enabling startegic decision-making.
+| Layer | Purpose |
+|-------|---------|
+| Bronze | Raw data loaded as-is from the ERP and CRM CSV files |
+| Silver | Cleansed and standardized data, with data quality checks |
+| Gold | Business-ready views modelled for analysis and reporting |
 
-  ## License
-  This project is licensed under the [MIT License].(LICENSE). You are free to use, modify and share this project with proper attribution.
+Architecture and data model diagrams are in the `docs` folder.
 
-  ## About Me
+## Analytics
 
-  Hi there! I'm **Kruthika**. Aspiring Analyst, learning basics for data analytics, building the projects.
+SQL-based analysis on:
 
+- Customer behaviour
+- Product performance
+- Sales trends
+
+The analysis includes exploratory analysis, advanced analytics, and customer and product report scripts.
+
+## Repository Structure
+
+```
+datasets/   Source CSV files (ERP and CRM)
+docs/       Architecture and data model documentation
+scripts/    SQL scripts for each layer, analysis and reports
+tests/      Data quality checks
+```
+
+## Tools
+
+SQL Server, SQL, ETL processes, data modelling
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## About Me
+
+Hi, I'm Kruthika. I'm an agriculture professional moving into data analytics, with a background in research, structured interviews and media. I'm building projects in SQL, Tableau and Python to prepare for data analyst roles in agribusiness.
